@@ -1,0 +1,232 @@
+/* Resetting default margins and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Styling for the body */
+body {
+  height: 100vh; /* Full viewport height */
+  width: 100%; /* Full viewport width */
+  background-color: rgba(0, 0, 0, .9); /* Dark background */
+  color: #FFFFFF; /* White text */
+  font-family: "Baloo Da 2", serif; /* Custom font */
+  display: flex; /* Flex layout */
+  flex-direction: column; /* Stack children vertically */
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  text-align: center; /* Center text alignment */
+}
+
+/* Container for the app */
+.container {
+  flex: 1; /* Takes up remaining vertical space */
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3.5em; /* Spacing between elements */
+}
+
+/* Title styling */
+h1 {
+  color: #03A9F4; /* Light blue text */
+}
+
+/* Styling for the form */
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1em; /* Spacing between form groups */
+}
+
+/* Form group layout */
+.form-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Styling for input fields */
+.form-control {
+  background-color: #2C2C2C; /* Dark gray background */
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.4); /* Inner shadow */
+  border-radius: 0 8px 8px 0; /* Rounded right corners */
+  border: 1px solid #444; /* Border color */
+  border-left: none; /* No left border */
+  outline: none;
+  padding: 10px; /* Inner spacing */
+  font-size: 1rem; /* Font size */
+  color: #FFFFFF; /* Text color */
+  width: clamp(1px, 95%, 350px); /* Responsive width */
+}
+
+/* Placeholder text styling */
+.form-control::placeholder {
+  color: #777; /* Light gray placeholder */
+}
+
+/* Focused input styling */
+.form-control:focus {
+  border: 1px solid #03A9F4; /* Blue border */
+  border-left: none;
+  box-shadow: 0 0 8px #03A9F4; /* Blue glow */
+}
+
+/* Styling for dropdowns */
+.select-dropdown {
+  background: none;
+  border-radius: 8px 0 0 8px; /* Rounded left corners */
+  border: 1px solid #444; /* Border color */
+  border-right: 1px solid #444;
+  outline: none;
+  padding: 10px;
+  font-size: 1rem;
+  color: #FFFFFF;
+}
+
+/* Focused dropdown styling */
+.select-dropdown:focus {
+  border: 1px solid #03A9F4; /* Blue border */
+  box-shadow: 0 0 8px #03A9F4; /* Blue glow */
+}
+
+/* Styling for dropdown options */
+option {
+  background: #2C2C2C; /* Dark gray background */
+  border: none;
+}
+
+/* Button styling */
+.button {
+  position: relative;
+  padding: 10px 22px; /* Button padding */
+  border-radius: 6px; /* Rounded corners */
+  border: none; /* No border */
+  color: #fff; /* White text */
+  cursor: pointer; /* Pointer cursor on hover */
+  background-color: #0077ff; /* Blue background */
+  transition: all 0.2s ease; /* Smooth transition */
+}
+
+/* Button active state */
+.button:active {
+  transform: scale(0.96); /* Shrink slightly */
+}
+
+/* Button hover state */
+.button:hover {
+  -webkit-animation: pulse 1s infinite; /* Animation on hover */
+  animation: pulse 1s ease;
+}
+
+/* Keyframe animations for button hover */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(5, 186, 218, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(218, 103, 68, 0%);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(218, 103, 68, 0%);
+  }
+}
+
+/* For focus animation */
+.button:before,
+.button:after {
+  position: absolute;
+  content: "";
+  width: 150%;
+  left: 50%;
+  height: 100%;
+  transform: translateX(-50%);
+  z-index: -1000;
+  background-repeat: no-repeat;
+}
+
+.button:focus:before {
+  top: -70%;
+  background-image: radial-gradient(circle, #0077ff 20%, transparent 20%),
+    radial-gradient(circle, transparent 20%, #0077ff 20%, transparent 30%),
+    radial-gradient(circle, #0077ff 20%, transparent 20%),
+    radial-gradient(circle, #0077ff 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #0077ff 15%, transparent 20%),
+    radial-gradient(circle, #0077ff 20%, transparent 20%),
+    radial-gradient(circle, #0077ff 20%, transparent 20%),
+    radial-gradient(circle, #0077ff 20%, transparent 20%),
+    radial-gradient(circle, #0077ff 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%,
+    10% 10%, 18% 18%;
+  background-position: 50% 120%;
+  animation: bluetopBubbles 0.6s ease;
+}
+
+@keyframes bluetopBubbles {
+  0% {
+    background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%,
+      40% 90%, 55% 90%, 70% 90%;
+  }
+
+  50% {
+    background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%,
+      50% 50%, 65% 20%, 90% 30%;
+  }
+
+  100% {
+    background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%,
+      50% 40%, 65% 10%, 90% 20%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
+
+.button:focus::after {
+  bottom: -70%;
+  background-image: radial-gradient(circle, #0077ff 20%, transparent 20%),
+    radial-gradient(circle, #0077ff 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #0077ff 15%, transparent 20%),
+    radial-gradient(circle, #0077ff 20%, transparent 20%),
+    radial-gradient(circle, #0077ff 20%, transparent 20%),
+    radial-gradient(circle, #0077ff 20%, transparent 20%),
+    radial-gradient(circle, #0077ff 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 20% 20%, 18% 18%;
+  background-position: 50% 0%;
+  animation: bluebottomBubbles 0.6s ease;
+}
+
+@keyframes bluebottomBubbles {
+  0% {
+    background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%,
+      70% -10%, 70% 0%;
+  }
+
+  50% {
+    background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%,
+      105% 0%;
+  }
+
+  100% {
+    background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%,
+      110% 10%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
+
+/* Divider line styling */
+hr {
+  width: 100%;
+  border-color: #444444; /* Gray divider */
+}
+
+/* Footer text styling */
+footer {
+    padding: 10px; /* Inner spacing */
+    color: #777; /* Light gray text */
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- The title of the web page displayed on the browser tab -->
+  <title>Currency Converter</title>
+
+  <!-- Character encoding ensures correct display of text -->
+  <meta charset="UTF-8">
+
+  <!-- Ensures the website is responsive to different screen sizes -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Specifies compatibility with Internet Explorer -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- Provides the author's name -->
+  <meta name="author" content="Atia Farha">
+
+  <!-- Open Graph metadata for better social media sharing -->
+  <meta property="og:title" content="Currency Converter">
+  <meta name="keywords" content="currency converter, exchange rates, online calculator">
+  <meta name="description" content="A simple, sleek and user-friendly Currency Converter with real-time exchange rates!">
+  <meta property="og:description" content="Easily convert currencies with real-time exchange rates!">
+  <meta property="og:image" content="./assets/preview.png">
+  <meta property="og:url" content="https://atia-farha.github.io/currency-converter/">
+
+  <!-- Link to the website's favicon (icon displayed in the browser tab) -->
+  <link rel="icon" type="image/x-icon" href="./assets/favicon.png">
+
+  <!-- Link to the CSS file for styling -->
+  <link href=".src/style.css" rel="stylesheet">
+
+  <!-- Link to the JavaScript file with defer to ensure it loads after HTML -->
+  <script src="./src/script.js" defer></script>
+
+  <!-- Preloads the custom font to improve loading performance -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400..800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+</head>
+
+<body>
+  <!-- Main container for the app -->
+  <main class="container">
+    <!-- App Title -->
+    <h1 aria-labelledby="main-title">Currency Converter</h1>
+    <!-- Form for user input -->
+    <form>
+      <div class="form-group">
+        <!-- Dropdown for selecting the base currency -->
+        <select id="baseCurrency" class="select-dropdown" aria-label="Select base currency">
+          <!-- Options will be populated dynamically -->
+        </select>
+        <!-- Input field for entering the amount -->
+        <input id="amount" type="number" class="form-control" placeholder="Enter amount">
+      </div>
+      <div class="form-group">
+        <!-- Dropdown for selecting the target currency -->
+        <select id="targetCurrency" class="select-dropdown" aria-label="Select target currency">
+          <!-- Options will be populated dynamically -->
+        </select>
+        <!-- Disabled input field to display the conversion result -->
+        <input class="form-control" id="result" placeholder="Converted Amount" aria-live="polite" disabled></input>
+      </div>
+    </form>
+    <!-- Button to trigger the conversion -->
+    <button class="button" id="convertBtn">Convert</button>
+  </main>
+
+  <hr>
+
+  <!-- Footer section with copyright information -->
+  <footer>
+    <p class="copyright">&copy 2024 Atia Farha | All Rights Reserved</p>
+  </footer>
+</body>
+
+</html>
