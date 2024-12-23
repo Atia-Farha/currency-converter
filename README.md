@@ -28,11 +28,9 @@ Currency-Converter/        # Root directory
 ├── assets/               # Directory for static assets
 │   ├── favicon.png       # Favicon for the website
 │   └── preview.png       # Preview image for social sharing.
-│
 ├── src/                  # Source code directory
 │   ├── style.css         # Main CSS file for styling
 │   └── script.js         # JavaScript for functionality
-│
 ├── index.html            # Main HTML file
 ├── README.md             # Project documentation
 └── LICENSE               # License file 
@@ -51,7 +49,7 @@ Currency-Converter/        # Root directory
 - [ExchangeRate-API](https://www.exchangerate-api.com/)
 
 ## API Integration
-This application uses the ExchangeRate API to fetch real-time exchange rates. 
+It uses the ExchangeRate API to fetch real-time exchange rates. 
 
 ### Key Functions:
 
