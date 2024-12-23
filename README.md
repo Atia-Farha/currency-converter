@@ -2,6 +2,8 @@
 
 A sleek, simple, and user-friendly Currency Converter web application that allows users to convert currencies with real-time exchange rates. It is designed for ease of use to convert one currency into another. It dynamically fetches exchange rates from a reliable API, ensuring users always get the most up-to-date conversion rates.
 
+![Preview](/assets/preview.png)
+
 ## Table of Contents
 - [Features](#features)
 - [Project Structure](#project-structure)
