@@ -65,7 +65,7 @@ convertCurrency(): Calculates and displays the converted amount.
 4. Choose the currency you want to convert to using the second dropdown.
 5. Click the "Convert" button or press "Enter" to view the converted amount.
 
-*Ensure that you already have an installed web browser (Chrome, Firefox, etc.) on your device. 
+> Ensure that you already have an installed web browser (Chrome, Firefox, etc.) on your device. 
 
 ## Reporting Issues
 
